@@ -1,0 +1,18 @@
+{
+	"Name": "DockerAsService",
+	"DisplayName": "Docker As A Service",
+	"Description": "Run Docker as a service under VirtualBoxUser",
+
+	"StartDir": "C:\\Docker VM",
+	"StartExec": "C:\\Program Files\\Oracle\\VirtualBox\\VBoxHeadless.exe",
+	"StartArgs": ["--startvm", "boot2docker-vm"],
+	"StartEnv": [],
+
+  "Stderr": "C:\\Docker VM\\DockerAsService_err.log",
+	"Stdout": "C:\\Docker VM\\DockerAsService_out.log",
+
+  "StopDir": "C:\\Docker VM",
+  "StopExec": "C:\\Program Files\\Oracle\\VirtualBox\\VBoxManage.exe",
+  "StopArgs": ["controlvm","boot2docker-vm","poweroff"],
+  "StopEnv": []
+}
